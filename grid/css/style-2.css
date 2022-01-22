@@ -1,0 +1,58 @@
+.container > div,
+.container-2 >div,
+.container-3 >div{
+    background: #eee;
+    padding : 20px;
+}
+
+.container > div:nth-child(odd),
+.container-2 >div:nth-child(odd),
+.container-3 >div:nth-child(odd){
+    background: rgb(241, 170, 170);
+}
+
+
+
+.container{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(6,100px);
+    grid-template-columns:repeat(6,1fr);
+    grid-template-columns:repeat(auto-fit,100px);
+    grid-template-columns :repeat(auto-fit,minmax(100px,1fr));
+
+    grid-template-rows: repeat(2,100px);
+    grid-auto-rows: 100px;
+
+
+    /* center the grid */
+    height: 800px;
+    justify-content: center;
+    align-content: center;
+}
+
+
+
+
+.container-2{
+    border: 1px solid black;
+    display: grid;
+    grid-gap: 7px;
+
+    grid-template-columns :repeat(auto-fit,minmax(200px,1fr));
+    grid-template-rows: 100px 100px;
+
+    margin-bottom: 50px;
+}
+
+.container-3{
+    border: 1px solid black;
+    display: grid;
+    grid-gap: 7px;
+
+    grid-template-columns :repeat(auto-fill,minmax(200px,1fr));
+    grid-template-rows: 100px 100px;
+
+    margin-bottom: 50px;
+    
+}
